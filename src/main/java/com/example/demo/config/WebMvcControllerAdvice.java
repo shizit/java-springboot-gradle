@@ -25,6 +25,12 @@ public class WebMvcControllerAdvice {
 		return "error/CustomPage";
 	}
 	
+	@ExceptionHandler(Exception.class)
+	public String handleException(Exception e, Model model) {
+		model.addAttribute("message", e);
+		return "error/CustomPage";
+	}
+	
 //	@ExceptionHandler(InquiryNotFoundException.class)
 //	public String handleException(InquiryNotFoundException e,Model model) {
 //		model.addAttribute("message", e);
