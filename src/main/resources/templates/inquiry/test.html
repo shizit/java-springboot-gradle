@@ -8,6 +8,7 @@
 <body>
 <h1 th:text="${title}">仮のタイトル</h1>
 <p th:text="${name}"></p>
+<input id="name" name="name" type="text" th:value="*{name}"><br>
 <p th:text="${email}"></p>
 <p th:text="${contents}"></p>
 </body>
